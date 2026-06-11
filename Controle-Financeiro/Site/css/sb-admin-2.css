@@ -10564,6 +10564,9 @@ a:focus {
   }
   .sidebar .sidebar-brand .sidebar-brand-text {
     display: inline;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.02rem;
   }
   .sidebar .sidebar-heading {
     text-align: left;
