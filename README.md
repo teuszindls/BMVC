@@ -24,9 +24,11 @@ O sistema busca oferecer recursos como:
 
 ## Status do Projeto
 
-🚧 Em desenvolvimento
+✅ Concluído
 
-O projeto encontra-se em fase de desenvolvimento e novas funcionalidades serão adicionadas ao longo da disciplina.
+Projeto está funcionando e está sendo hospedado na Netlify
+
+Link: https://sistemadegestaofinanceiro.netlify.app
 
 ## Licença
 
