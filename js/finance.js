@@ -18,8 +18,32 @@
   }
 
   function parseAmount(value) {
-    if (typeof value !== 'string') return Number(value) || 0;
-    return Number(value.replace(/\./g, '').replace(',', '.')) || 0;
+    if (typeof value === 'number') {
+      return Number.isFinite(value) ? value : 0;
+    }
+    if (typeof value !== 'string') {
+      return 0;
+    }
+
+    const trimmed = value.trim();
+    if (!trimmed) {
+      return 0;
+    }
+
+    let normalized = trimmed.replace(/\s+/g, '');
+
+    if (normalized.includes(',') && normalized.includes('.')) {
+      normalized = normalized.replace(/\./g, '').replace(/,/g, '.');
+    } else if (normalized.includes(',')) {
+      normalized = normalized.replace(/,/g, '.');
+    } else if ((normalized.match(/\./g) || []).length > 1) {
+      const parts = normalized.split('.');
+      const decimalPart = parts.pop();
+      normalized = parts.join('') + '.' + decimalPart;
+    }
+
+    const parsed = Number(normalized);
+    return Number.isFinite(parsed) ? parsed : 0;
   }
 
   function formatCurrency(value) {
