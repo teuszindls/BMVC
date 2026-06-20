@@ -26,9 +26,9 @@ O sistema busca oferecer recursos como:
 
 ✅ Concluído
 
-Projeto está funcionando e está sendo hospedado na Netlify
+Projeto está funcionando e está sendo hospedado na Vercel
 
-Link: https://sistemadegestaofinanceiro.netlify.app
+Link: https://sistemadegestaofinanceira.vercel.app/index.html
 
 ## Licença
 
